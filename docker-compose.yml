@@ -1,0 +1,15 @@
+version: "2.1"
+
+services:
+  db:
+    container_name: eventmoddb
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "eventmodadmin"
+    ports:
+      - "3306:3306"
+
+networks:
+    default:
+        external:
+            name: eventmod-network
